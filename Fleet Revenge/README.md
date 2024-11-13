@@ -15,6 +15,12 @@ L’objectif est simple : il faut détruire les deux vaisseaux de l’adversaire
 - [@Raphaël Kondratiuk](https://github.com/Raphael-K-78/)
 - [@Raphaël Thuret](https://github.com/Nisetram)
 
+## Technologies
+
+- **HTML/CSS**
+- **JavaScript**
+- **PHP**
+- **SQL**
 
 ## Demo
 [lien du jeu](http://fleet-revenge.raphael.kondratiuk.mmi-velizy.fr/)

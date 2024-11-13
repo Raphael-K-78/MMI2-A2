@@ -1,2 +1,34 @@
-# MMI2-A2
-Tous les codes des travaux de la 2nd année de mon BUT MMI
+# BUT MMI - 2ère Année
+
+Bienvenue dans mon dépôt GitHub pour la seconde année de mon BUT en Métiers du Multimédia et de l'Internet (MMI). Ce dépôt contient tous les projets de programmation réalisés au cours de cette première année.
+
+## Table des matières
+
+- [Description](#description)
+- [Projets](#projets)
+- [Technologies](#technologies)
+- [Organisation](#organisation)
+
+## Description
+
+Ce dépôt regroupe les différents projets de programmation réalisés pendant la seconde année du BUT MMI. Il comprend des projets de cours, de TP, et d’autres réalisations individuelles ou en groupe. L'objectif est de suivre l'évolution de mes compétences en développement et de partager mes travaux.
+
+## Projets
+
+Voici la liste des projets présents dans ce dépôt :
+
+1. **[Projet jeu](https://github.com/Raphael-K-78/MMI2-A2/tree/main/Fleet%20Revenge)** - Création d'un jeu multijoueur pour améliorer mes compétences en PHP avec les Objets et la connexion par PDO.
+
+Pour chaque projet, vous trouverez une description complète et un fichier README spécifique, expliquant les fonctionnalités et les étapes de réalisation.
+
+## Technologies
+
+- **HTML/CSS**
+- **JavaScript**
+- **PHP**
+- **SQL**
+
+## Organisation
+
+Les projets sont organisés par dossier, avec une structure de fichiers propre à chaque projet pour faciliter la navigation et la compréhension du code.
+

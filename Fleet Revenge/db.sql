@@ -1,4 +1,3 @@
-```sql
 -- Création de la table users
 CREATE TABLE `users` (
   `id_user` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -63,4 +62,3 @@ CREATE TABLE `log` (
   FOREIGN KEY (`id_user`) REFERENCES `users`(`id_user`),
   FOREIGN KEY (`id_game`) REFERENCES `games`(`id_game`)
 );
-```

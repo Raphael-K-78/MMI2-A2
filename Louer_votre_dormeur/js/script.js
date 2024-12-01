@@ -191,6 +191,5 @@ $(function () {
         article(null, null);
     });
 
-    // Correction ici : Attacher la fonction `applyFilters` sans l'exécuter immédiatement
     $('.filter-group input').on('change', applyFilters); 
 });

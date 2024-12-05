@@ -1,4 +1,4 @@
-# BUT MMI - 2ère Année
+# BUT MMI - 2ème Année
 
 Bienvenue dans mon dépôt GitHub pour la seconde année de mon BUT en Métiers du Multimédia et de l'Internet (MMI). Ce dépôt contient tous les projets de programmation réalisés au cours de cette première année.
 

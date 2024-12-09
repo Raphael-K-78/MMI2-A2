@@ -29,6 +29,9 @@ Pour chaque projet, vous trouverez une description complète et un fichier READM
 - **JavaScript**
 - **PHP**
 - **SQL**
+- **JQuery/JQuery UI**
+- **Select2**
+- **AJAX**
 
 ## Organisation
 

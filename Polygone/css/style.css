@@ -1,0 +1,387 @@
+body {
+    font-family: Arial, sans-serif;
+    /* font-size: 2em; */
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+    /* margin: 20px auto; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+ul li{
+    width: fit-content;
+}
+
+ul{
+    width: fit-content;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    src: url('../upload/MerriweatherSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../upload/HKGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body *:is(h1, h2, h3, h4, h5, h6),dialog {
+    font-family: 'Hanken Grotesk',Arial,sans-serif;
+}
+
+dialog *:is(p,h2,h3,h4,h5,h6,blockquote){
+    margin: 0.75em 1em;
+    text-align: left;
+}
+
+blockquote:first-child{
+    font-style: italic;
+}
+
+body p,dialog p,button{
+    font-family: "Merriweather Sans", Arial, Roboto, sans-serif;
+
+}
+
+#text button{
+    margin: 1em;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0.4em 0.8em;
+    text-align: center;
+}
+
+button.close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+    background: rgba(0, 0, 0, 1);
+}
+
+button.close:hover{
+    color: red;
+}
+
+section header{
+    font-size: 2em;
+    position: absolute;
+    z-index: 12;
+    padding-top: 1em;
+    color: white;
+    pointer-events: none;
+    transition:opacity 1.6s ease-in-out, transform 1.5s ease-in-out;
+    opacity: 1;
+}
+
+#stage_1{
+    z-index: 10 ;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#stage_mid{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 9;
+}
+
+#stage_1 >*,#stage_2>*{
+    position: fixed;
+    margin: 0 auto;
+    display: block;
+    /* border: 2px solid #ccc; */
+    /* border-radius: 8px; */
+    aspect-ratio: 16/9;
+    width: 100dvw;
+    /* height: 100cqh; */
+    /* position: fixed; */
+    /* position: sticky; */
+    max-width: 100svw;
+    /* max-height: 100svh; */
+    top: 0;
+    left: 0;
+}
+
+#stage_2{
+    background-image: url("../upload/final1.png");
+    background-size: cover;
+    aspect-ratio: 16/9;
+    width: 100dvw;
+    max-width: 100svw;
+}
+
+video {
+    z-index: 10;
+}
+
+
+body::-webkit-scrollbar,html::-webkit-scrollbar {
+    display: none;
+}
+
+html{
+    color: black;
+}
+
+script{
+    z-index: -1;
+}
+
+dialog{
+    width: auto;
+    border-radius: 2.5vw;
+    height: 80%;
+    aspect-ratio: 4/3;
+    background: url("../upload/paper.jpg") no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(0.1);
+    transition: transform 1s ease-in-out;
+}
+
+dialog p{
+    text-align: left;
+}
+
+.dialogtext{
+    justify-content: normal !important;
+}
+
+dialog .popup-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+dialog .video_support{
+    height: 70%;
+    width: auto;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+}
+
+#text,#conclusion{
+    padding:15% ;
+    box-sizing: border-box;
+    color: black;
+    /* align-content: center; */
+    transform: scale(0.001);
+    transition: transform 1.6s ease-in-out;
+    transition-delay: 1s;
+    /* opacity: 1; */
+}
+
+#conclusion{
+    z-index:05;
+    pointer-events: none;
+}
+
+#conclusion > .content-text{
+    background-color: rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(1px); */
+    padding: 1em;
+    border-radius: 20px;
+}
+
+#text{
+    z-index: 11;
+
+}
+#fade{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-text{
+    width: fit-content;
+    height: max-content;
+    padding: 2%;
+    /* border:3px solid black; */
+    align-content: center;
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* backdrop-filter: blur(8px); */
+}
+
+h3{
+    color: black;
+}
+
+#stage_2 {
+    position: relative;
+    z-index: 0;
+    visibility: hidden;
+}
+#overlay{
+    pointer-events: none;
+}
+
+#Counter{
+    width: auto;
+    height: auto;
+    color: white;
+    position: absolute;
+    z-index: 04;
+    /* align-content:center; */
+    text-align: center;
+    font-size: 3em;
+    transition: all ease-in-out 0.5s;
+    top: 10px;
+    left: 10px;
+}
+
+.clickable {
+    background-color: transparent;
+    color: transparent;
+    position: absolute;
+    /* width: 100px!important; */
+    /* height: 100px!important; */
+    /* border-radius: 10px; */
+    cursor: pointer;
+    z-index: 02;
+    align-content: center;
+    text-align: center;
+    font-size: 3em;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+blockquote p{
+    padding: 0;
+    display:inline;
+    margin: 0;
+}
+
+#element1 {
+    top: 53%;
+    left: 35%;
+    width: 17%;
+    height: 10%;
+}
+
+#element2 {
+    top: 70%;
+    left: 60%;
+    width: 18%;
+    height: 30%;
+    /* background-color: green; */
+}
+
+#element3 {
+    top: 4%;
+    left: 68%;
+    width: 19%;
+    height: 25%;
+    /* background-color: blue; */
+}
+figure {
+    display: flex;
+    flex-flow: column;
+  }
+figure img{
+    width: 100%;
+}
+  
+  figcaption {
+    background-color: #222;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+  }
+#element4 {
+    top: 6%;
+    left: 30%;
+    width: 33%;
+    aspect-ratio: 16 / 9;
+    /* background-color: blue; */
+}
+
+.clickable:hover {
+    opacity: 1;
+    /* transform: scale(1.5); */
+    /* background-color: yellow !important; */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 03;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+}
+
+dialog .popup-content::-webkit-scrollbar {
+    width: 8px;
+    background-color: black; 
+    border-radius: 10px; 
+}
+
+dialog .popup-content::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+
+dialog .popup-content::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+    opacity: 0.75;
+}
+
+dialog .popup-content::-webkit-scrollbar-button {
+    display: none; 
+}
+
+hgroup p{
+    margin: 1em;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+.conclusion{
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+}
+
+hgroup{
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items:center;
+}

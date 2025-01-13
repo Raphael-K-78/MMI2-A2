@@ -36,7 +36,3 @@ Pour chaque projet, vous trouverez une description complète et un fichier READM
 ## Organisation
 
 Les projets sont organisés par dossier, avec une structure de fichiers propre à chaque projet pour faciliter la navigation et la compréhension du code.
-
-
-ddddd
-

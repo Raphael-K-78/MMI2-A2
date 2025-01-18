@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <!-- Import Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js" integrity="sha512-SIMGYRUjwY8+gKg7nn9EItdD8LCADSDfJNutF9TPrvEo86sQmFMh6MyralfIyhADlajSxqc7G0gs7+MwWF/ogQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/i18n/fr.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>GitStat</title>
+</head>
+<body>
+    <!-- Connexion Github -->
+    <div id="welcome" style="display: none; text-align: center; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1>Bienvenue sur GitStat</h1>
+        <a href="https://github.com/login/oauth/authorize?client_id=Iv23liRrWJ6Jk5lUA8HY&redirect_uri=https://gitstat.raphael.kondratiuk.mmi-velizy.fr&response_type=code&scope=read:user">
+            <button>Se connecter avec GitHub</button>
+        </a>
+    </div>
+
+    <!-- Select Repo -->
+    <div id="userInfo" style="display: none;">
+        <select name="user_data" id="user_data"></select>
+        <select id="repos_data" style="width: 5em;" disabled></select>
+    </div>
+    <div id="data" style="display: none;">
+        <div id="btn">
+            <div>
+                <button class="nav-btn" id="prev">← Précédent</button>
+                <button class="nav-btn" id="next">Suivant →</button>
+            </div>
+            <div>
+                <button class="mode-btn" id="semaine">Semaine</button>
+                <button class="mode-btn" id="mois">Mois</button>
+                <button class="mode-btn" id="annee">Année</button>
+            </div>
+        </div>
+        <div style="width: 50vh; height: 50vh; aspect-ratio: 1/1;">
+            <canvas id="language_chart" width="100%" height="100%"></canvas>
+        </div>
+        <canvas id="time_chart"></canvas>
+        <canvas id="commit_stat_chart"></canvas>
+        <div id="math">
+
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script src="js/date_manager.js"></script>
+    <script src="js/repo_select.js"></script>
+    <script src="js/github_connect.js"></script>
+    <script src="js/chart_create.js"></script>
+
+    <!-- typo: 
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+ -->
+</body>
+</html>

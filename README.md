@@ -20,6 +20,7 @@ Voici la liste des projets présents dans ce dépôt :
 1. **[Projet jeu](https://github.com/Raphael-K-78/MMI2-A2/tree/main/Fleet%20Revenge)** - Création d'un jeu multijoueur pour améliorer mes compétences en PHP avec les Objets et la connexion par PDO.
 2. **[Projet Intégration](https://github.com/Raphael-K-78/MMI2-A2/tree/main/Vodka%26shake)** - Création d'un site consitué de 3 pages avec le css correspondant pour s'entrainer en intégration.
 3. **[Projet Ajax](https://github.com/Raphael-K-78/MMI2-A2/tree/main/Louer_votre_dormeur)** - Création d'un site Onepage avec l'utilisation d'ajax pour filtrer des données pour s'entrainer
+4. **[Projet Webdocumentaire](https://github.com/Raphael-K-78/MMI2-A2/tree/main/Polygone)** - Création d'une page web pour un Webdocumentaire sur les jeux vidéo ultraréalistes
 
 Pour chaque projet, vous trouverez une description complète et un fichier README spécifique, expliquant les fonctionnalités et les étapes de réalisation.
 
@@ -32,11 +33,8 @@ Pour chaque projet, vous trouverez une description complète et un fichier READM
 - **JQuery/JQuery UI**
 - **Select2**
 - **AJAX**
+- **API Youtube**
 
 ## Organisation
 
 Les projets sont organisés par dossier, avec une structure de fichiers propre à chaque projet pour faciliter la navigation et la compréhension du code.
-
-
-ddddd
-

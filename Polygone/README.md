@@ -13,4 +13,4 @@ Ce projet est un site interactif et immersif explorant l'ultraréalisme dans les
 - **API Youtube**
 
 ## Demo
-[lien du site]([http://sommeilclub.raphael.kondratiuk.mmi-velizy.fr/](http://polygone.raphael.kondratiuk.mmi-velizy.fr/))
+[lien du site]([http://sommeilclub.raphael.kondratiuk.mmi-velizy.fr/](http://polygone.raphael.kondratiuk.mmi-velizy.fr/)

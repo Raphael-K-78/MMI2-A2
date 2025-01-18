@@ -33,6 +33,7 @@ Pour chaque projet, vous trouverez une description complète et un fichier READM
 - **JQuery/JQuery UI**
 - **Select2**
 - **AJAX**
+- **API Youtube**
 
 ## Organisation
 

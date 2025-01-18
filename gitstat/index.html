@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    
+    <!-- import css -->
+     <link rel="stylesheet" href="css/select2.css">
+     <link rel="stylesheet" href="css/welcome.css">
+     <link rel="stylesheet" href="css/data.css">
+
     <!-- Import Lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js" integrity="sha512-SIMGYRUjwY8+gKg7nn9EItdD8LCADSDfJNutF9TPrvEo86sQmFMh6MyralfIyhADlajSxqc7G0gs7+MwWF/ogQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -13,41 +17,50 @@
     <title>GitStat</title>
 </head>
 <body>
+    <main>
     <!-- Connexion Github -->
-    <div id="welcome" style="display: none; text-align: center; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <h1>Bienvenue sur GitStat</h1>
-        <a href="https://github.com/login/oauth/authorize?client_id=Iv23liRrWJ6Jk5lUA8HY&redirect_uri=https://gitstat.raphael.kondratiuk.mmi-velizy.fr&response_type=code&scope=read:user">
-            <button>Se connecter avec GitHub</button>
-        </a>
-    </div>
+        <section id="welcome" style="display: none; text-align: center;">
+            <h1>Bienvenue sur GitStat</h1>
+            <p>GitStat est un outil puissant qui permet d'analyser les statistiques d'un projet Git en fournissant des informations détaillées sur les commits au fil du temps. Il offre une vue d'ensemble sur les types de modifications effectuées, qu'il s'agisse d'ajouts, de suppressions ou de changements de fichiers, et permet de visualiser l'évolution de ces données dans le temps. En plus de cela, GitStat permet également d'identifier les langages de programmation les plus utilisés dans un repository, offrant ainsi une vision complète de la composition technique du projet. Que ce soit pour les développeurs cherchant à suivre leur travail ou pour les équipes analysant les tendances d'un projet open-source, GitStat constitue un outil indispensable pour une gestion optimale du code source.</p>
+            <a href="https://github.com/login/oauth/authorize?client_id=Iv23liRrWJ6Jk5lUA8HY&redirect_uri=https://gitstat.raphael.kondratiuk.mmi-velizy.fr&response_type=code&scope=read:user">
+                <button>Se connecter avec GitHub</button>
+            </a>
+        </section>
 
     <!-- Select Repo -->
-    <div id="userInfo" style="display: none;">
-        <select name="user_data" id="user_data"></select>
-        <select id="repos_data" style="width: 5em;" disabled></select>
-    </div>
-    <div id="data" style="display: none;">
-        <div id="btn">
-            <div>
-                <button class="nav-btn" id="prev">← Précédent</button>
-                <button class="nav-btn" id="next">Suivant →</button>
+        <section id="userInfo" style="display: none;">
+            <select name="user_data" id="user_data"></select>
+            <select id="repos_data"  disabled></select>
+        </section>
+        <section id="data" style="display: none;">
+            <div id="btn">
+                <div>
+                    <button class="nav-btn" id="prev">← Précédent</button>
+                    <button class="nav-btn" id="next">Suivant →</button>
+                </div>
+                <div>
+                    <button class="mode-btn" id="semaine">Semaine</button>
+                    <button class="mode-btn" id="mois">Mois</button>
+                    <button class="mode-btn" id="annee">Année</button>
+                </div>
             </div>
-            <div>
-                <button class="mode-btn" id="semaine">Semaine</button>
-                <button class="mode-btn" id="mois">Mois</button>
-                <button class="mode-btn" id="annee">Année</button>
+            <div id="graph">
+            <div id="div_c1" >
+                <canvas id="language_chart" width="100%" height="100%"></canvas>
             </div>
-        </div>
-        <div style="width: 50vh; height: 50vh; aspect-ratio: 1/1;">
-            <canvas id="language_chart" width="100%" height="100%"></canvas>
-        </div>
-        <canvas id="time_chart"></canvas>
-        <canvas id="commit_stat_chart"></canvas>
-        <div id="math">
-
-        </div>
-    </div>
-
+            <div id="math">
+                <!-- info -->
+            </div>
+            <div id="div_c2">
+                <canvas id="time_chart"></canvas>
+            </div>
+            <div id="div_c3">
+                <canvas id="commit_stat_chart"></canvas>
+            </div>
+            </div>            
+            
+        </section>
+    </main>
 
     <!-- Script -->
     <script src="js/date_manager.js"></script>

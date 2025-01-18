@@ -1,0 +1,68 @@
+.select2-container {
+    width: 80% !important; 
+}
+
+.select2-container .select2-selection--single {
+    background-color: #333; 
+    color: white; 
+    border: 1px solid #444; 
+    border-radius: 4px; 
+    padding: 6px 12px; 
+    font-size: 16px;
+    max-width: 100%; 
+    height: fit-content !important;
+}
+
+.select2-container .select2-selection--single:focus {
+    outline: none; 
+    border-color: #666;
+}
+
+.select2-container .select2-selection__rendered {
+    color: white;
+    line-height: 18px;
+}
+
+.select2-container .select2-results__option {
+    background-color: #333; 
+    color: white; 
+    padding: 8px; 
+}
+
+.select2-container .select2-results__option--highlighted {
+    background-color: #444; 
+}
+
+#userInfo {
+    display: flex; 
+    justify-content: space-between; 
+    max-height: 5vh; 
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #222; 
+    border-radius: 6px;
+    overflow: hidden; 
+    width: 100%; /* Utiliser toute la largeur disponible */
+}
+
+#userInfo select {
+    width: 48%; /* Laisser un espace entre les deux éléments select */
+    margin-bottom: 10px; 
+    font-size: 16px;
+    background-color: #333; 
+    color: white; 
+    border: 1px solid #444; 
+    border-radius: 4px;
+    padding: 8px;
+}
+
+/* Mettre en surbrillance l'option sélectionnée */
+.select2-container .select2-results__option--highlighted {
+    background-color: #444; 
+}
+
+/* Style des éléments désactivés */
+#userInfo select:disabled {
+    background-color: #555; 
+    color: #888; 
+}

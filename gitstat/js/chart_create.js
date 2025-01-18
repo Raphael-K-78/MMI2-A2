@@ -52,7 +52,7 @@ const GroupeCommitStats = (commits_stat, par) => {
             groupKey = formatMois(commitDate); // Format "MM/YYYY"
         }
 
-        console.log("Clé de regroupement:", groupKey); // Vérifiez la clé utilisée pour regrouper
+        // console.log("Clé de regroupement:", groupKey); // Vérifiez la clé utilisée pour regrouper
 
         if (!groupe[groupKey]) {
             groupe[groupKey] = { filesChanged: 0, insertions: 0, deletions: 0 };
@@ -250,7 +250,7 @@ function fetchCommits(debut, fin, par) {
 
             // Vérifiez si le graphique existe déjà
             if (window.Chart3) {
-                // Réinitialiser les labels et les datasets précédents
+                window.Chart2.data.labels = []; // Réinitialiser les anciens labels
                 window.Chart3.data.labels = labels; 
 
                 // Mettre à jour les datasets avec les nouvelles valeurs
@@ -307,7 +307,7 @@ function fetchCommits(debut, fin, par) {
                                 callbacks: {
                                     label: function(context) {
                                         // Affichage personnalisé du tooltip pour chaque ligne
-                                        return `${context.dataset.label}: ${context.raw}`;
+                                        return `${context.dataset.label}: ${context.raw.y}`;
                                     }
                                 }
                             },
@@ -408,7 +408,33 @@ $('#repos_data').on('select2:select', function (e) {
         var title = `Langages de programmation utiliser par ${SelectedUser} pour le Repo ${SelectedRepo}`;
         const backgroundColors = [];
         const borderColors = [];
+        
+        // Convertir les valeurs en tableau pour traitement
+const calc = Object.values(data);
 
+// Calcul de la Moyenne
+const moyenne = calc.reduce((sum, value) => sum + value, 0) / calc.length;
+
+// Calcul de la Médiane
+const sortedValues = calc.sort((a, b) => a - b);
+let mediane;
+if (sortedValues.length % 2 === 0) {
+    mediane = (sortedValues[sortedValues.length / 2 - 1] + sortedValues[sortedValues.length / 2]) / 2;
+} else {
+    mediane = sortedValues[Math.floor(sortedValues.length / 2)];
+}
+
+// Calcul de l'Écart-type
+const variance = calc.reduce((variance, value) => variance + Math.pow(value - moyenne, 2), 0) / calc.length;
+const ecartType = Math.sqrt(variance);
+
+// Insertion des résultats dans la div #math
+const mathDiv = document.getElementById('math');
+mathDiv.innerHTML = `
+    <p><strong>Moyenne des langages utilisés en octets : </strong>${moyenne.toFixed(2)} octets</p>
+    <p><strong>Médiane des langages utilisés en octets : </strong>${mediane.toFixed(2)} octets</p>
+    <p><strong>Écart-type des langages utilisés en octets : </strong>${ecartType.toFixed(2)} octets</p>
+`;
         labels.forEach(() => {
             const color = getRandomColor();
             backgroundColors.push(`rgba(${color}, 0.3)`);  // Couleur avec 30% d'opacité
@@ -416,6 +442,7 @@ $('#repos_data').on('select2:select', function (e) {
         });        
         if (window.Chart1) {
             // Met à jour si le graphique existe déjà
+            
             window.Chart1.data.labels = labels;
             window.Chart1.data.datasets[0].data = percentages;
             window.Chart1.data.datasets[0].backgroundColor = backgroundColors;

@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // console.table(data);
             if(data.token == "false"){
                 console.log("L'utilisateur n'est pas connecté.");
-                document.getElementById('welcome').style.display = 'block';
+                document.getElementById('welcome').style.display = 'flexe';
                 document.getElementById('userInfo').style.display = 'none';
                 console.log("token Invalid");
                 localStorage.clear();
             }
             else{
                 console.log("token Valid")
-                document.getElementById('userInfo').style.display = 'block';
+                document.getElementById('userInfo').style.display = 'flex';
 
             }
         });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else {
         // Afficher la section de bienvenue si l'utilisateur n'est pas connecté
         console.log("L'utilisateur n'est pas connecté.");
-        document.getElementById('welcome').style.display = 'block';
+        document.getElementById('welcome').style.display = 'flex';
         document.getElementById('userInfo').style.display = 'none';
     }
 });

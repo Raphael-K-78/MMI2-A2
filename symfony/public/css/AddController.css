@@ -1,0 +1,46 @@
+#add{
+    font-size:2em;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+#add ul{
+    width: 25%;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    padding: 0,30px;
+    justify-content: left;
+}
+
+#add ul > li{
+    width: 100%;
+    text-align: left;
+}
+
+#add details > summary{
+    text-align: left;
+}
+
+#add details{
+    size: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#add details > img{
+    width: 25%;
+    height: auto;
+    aspect-ratio: 1/1;
+    justify-content: center;
+}
+
+.data_title{
+    font-weight: bold;
+}

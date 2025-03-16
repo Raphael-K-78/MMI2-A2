@@ -1,0 +1,9 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+Hello:
+    path: /hello_world/{name}
+    controller: App\Controller\HelloWorldController::index

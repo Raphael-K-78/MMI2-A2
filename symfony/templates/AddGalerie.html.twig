@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Add Galerie image!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="css/AddController.css" /> 
+{% endblock %}
+{% block body %}
+<div id='add'>
+    <p>L'image {{image.titre}} à bien été ajouter à la DB</p>
+    <details>
+        <summary><span class='data_title'>Titre: </span> {{image.titre}}</summary>
+        <ul>
+            <li><span class='data_title'>Auteur:</span>{{image.auteur}}</li>
+            <li><span class='data_title'>Lien:</span>{{image.link}}</li>
+        </ul>
+        <img src={{image.link}}>
+    </details>
+</div>
+{% endblock %}

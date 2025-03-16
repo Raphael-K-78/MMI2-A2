@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galerie d'images{% endblock %}
+{% block stylesheets %}
+        <link href="{{ asset('css/galerie.css')}}" rel="stylesheet">
+        {% endblock %}
+{% block body %}
+    <h1><a href="#">galerie d'image</a></h1><br>
+    <div id='button'>
+        {% if page_before != -1 %}
+            <a href="{{ path('app_galerie2', {'page': page_before}) }}">Last Page</a>
+        {% else %}
+            Page Précédente
+        {% endif %}
+        {% if page_after != -1 %}
+            <a href="{{ path('app_galerie2', {'page': page_after }) }}">Page Suivante</a>
+        {% else %}
+            Next Page
+        {% endif %}
+    </div>
+    <br>
+    <div id='galerie'>
+        {% for image in images %}
+            <div class='galerie_img'>
+                <h2>{{ image.Titre }} par {{ image.auteur }}</h2>
+                <img src="{{ image.link }}">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Ne pas rediriger les fichiers statiques (images, CSS, JS, etc.)
+    RewriteRule ^(css|js|img|uploads)/ - [L]
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Permettre l'accès aux fichiers d'images, CSS, JS, etc.
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|ttf|woff|woff2|eot)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
